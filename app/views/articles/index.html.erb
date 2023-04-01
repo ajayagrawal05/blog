@@ -1,0 +1,4 @@
+<% @articles.each do |email| %>
+    <h3><%= link_to email.title, article_path(email.id) %></h3><br>
+    <%= raw(email.body) %><br/>
+<% end %>

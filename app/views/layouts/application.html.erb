@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Blog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+    <script src="https://cdn.tiny.cloud/1/9o4q807j2n921248myo9gr25gyipylerxhcihsjwjsvk6itf/tinymce/6/tinymce.min.js" referrerpolicy="origin"></script>
+  </head>
+
+  <body>
+    <%= yield %>
+  </body>
+</html>

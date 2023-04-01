@@ -1,0 +1,38 @@
+<style>
+
+.tox{
+    width: '70%';
+    margin: '0 auto';
+}
+</style>
+
+
+<%= form_with model: @article do |f| %>
+    Title:
+    <%= f.text_field :title %><br>
+    Author:
+    <%= f.text_field :author %><br>
+
+    <%= f.file_field :banner %>
+
+
+    Body:
+    <%= f.text_area :body, id: :body, value: @article.body, size: "70x5" %><br>
+
+    <%= f.submit 'Create' %>
+<% end %>
+
+  <script>
+    tinymce.init({
+      width: '60%',
+      selector: 'textarea',
+      plugins: 'anchor autolink charmap codesample emoticons image link lists media searchreplace table visualblocks wordcount code preview fullscreen',
+      toolbar: 'undo redo | blocks fontfamily fontsize | bold italic underline strikethrough |fullscreen link image media table | align lineheight | numlist bullist indent outdent | emoticons charmap | removeformat | code | preview',
+      paste_data_images: true,
+        image_advtab: true,
+        image_caption: true,
+        imagetools_toolbar: "rotateleft rotateright | flipv fliph | editimage imageoptions",
+    });
+  </script>
+
+
